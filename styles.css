@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(17, 81, 72);
+}
+
+h1{
+  text-align: justify;
+  color: blanchedalmond;
+}
+
+#checker {
+  text-align: justify;
+  color: white;
+}
+
+#definition {
+  text-align: justify-center;
+  color: blanchedalmond;
+  width: 400px;
+  border: 1px solid black;
+  padding: 10px;
+}
