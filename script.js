@@ -1,14 +1,9 @@
-let userInput = document.getElementById("text-input").value;
-console.log(userInput);
+
 
 function cleanUserInput(userInput) {
   let cleanString = userInput.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
   return cleanString;
 }
-
-console.log(cleanUserInput("Bob"));
-// console.log(cleanUserInput("A man a plan a canal Panama"));
-// console.log(cleanUserInput("race car"));
 
 function isPalindrome(cleanString) {
   let firstIndex = 0;
@@ -21,6 +16,19 @@ function isPalindrome(cleanString) {
     return true;
 }
 
-console.log(isPalindrome("bob"));
-console.log(isPalindrome("hello"));
-// console.log(isPalindrome("racecar"));
+function handleButtonClick() {
+  let userInput = document.getElementById("text-input").value;
+  let cleanedString = cleanUserInput(userInput);
+  if(!cleanedString) {
+    return alert(`Please input a value`);
+  } else {
+  if(isPalindrome(cleanedString)){
+    return document.getElementById("result").innerHTML = `${userInput} is a palindrome`
+  } else {
+    document.getElementById("result").innerHTML = `${userInput} is not a palindrome`
+  }
+  };
+  
+
+
+}
